@@ -78,5 +78,26 @@ namespace DatabaseConnection.DAL
                 return false;
             }
         }
+
+        public bool DeleteStudent(Student aStudent)
+        {
+            SqlConnection aSqlConnection=new SqlConnection(connectingStudentTable);
+            string query = "DELETE FROM Student WHERE RegNo='"+aStudent.RegNo+"' ";
+            SqlCommand command = new SqlCommand(query,aSqlConnection);
+            aSqlConnection.Open();
+            int rowAffect = command.ExecuteNonQuery();
+            aSqlConnection.Close();
+
+            if (rowAffect>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+
+        }
     }
 }

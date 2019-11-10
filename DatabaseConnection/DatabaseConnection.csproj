@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UI\DeleteStudentUI.aspx" />
     <Content Include="UI\index.aspx" />
     <Content Include="UI\ShowAllStudentUI.aspx" />
     <Content Include="UI\StudentUpdateUI.aspx" />
@@ -75,6 +76,13 @@
   <ItemGroup>
     <Compile Include="BLL\StudentManager.cs" />
     <Compile Include="DAL\StudentGateway.cs" />
+    <Compile Include="UI\DeleteStudentUI.aspx.cs">
+      <DependentUpon>DeleteStudentUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DeleteStudentUI.aspx.designer.cs">
+      <DependentUpon>DeleteStudentUI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

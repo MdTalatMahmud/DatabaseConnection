@@ -53,5 +53,17 @@ namespace DatabaseConnection.BLL
             
             
         }
+
+        public String DeleteStudent(Student aStudent)
+        {
+            if (aStudentGateway.DeleteStudent(aStudent) == true)
+            {
+                return "successfully deleted";
+            }
+            else
+            {
+                return "Not Deleted!";
+            }
+        }
     }
 }
