@@ -67,27 +67,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.aspx" />
-    <Content Include="ShowAllStudentUI.aspx" />
+    <Content Include="UI\index.aspx" />
+    <Content Include="UI\ShowAllStudentUI.aspx" />
+    <Content Include="UI\StudentUpdateUI.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="BLL\StudentManager.cs" />
+    <Compile Include="DAL\StudentGateway.cs" />
+    <Compile Include="UI\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="UI\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowAllStudentUI.aspx.cs">
+    <Compile Include="UI\ShowAllStudentUI.aspx.cs">
       <DependentUpon>ShowAllStudentUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ShowAllStudentUI.aspx.designer.cs">
+    <Compile Include="UI\ShowAllStudentUI.aspx.designer.cs">
       <DependentUpon>ShowAllStudentUI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="UI\StudentUpdateUI.aspx.cs">
+      <DependentUpon>StudentUpdateUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\StudentUpdateUI.aspx.designer.cs">
+      <DependentUpon>StudentUpdateUI.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -97,6 +107,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\Gateway\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
