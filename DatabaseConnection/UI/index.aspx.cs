@@ -12,9 +12,14 @@ namespace DatabaseConnection
 {
     public partial class index : System.Web.UI.Page
     {
+        StudentManager aStudentManager = new StudentManager();
+        DepartmentManagement aDepartmentManagement=new DepartmentManagement();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DropDownListID.DataTextField = "Name";
+            DropDownListID.DataSource = aDepartmentManagement.GetAllDepartments();
+            DropDownListID.DataBind();
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -39,8 +44,6 @@ namespace DatabaseConnection
 
         protected void SaveButton_Click(object sender, EventArgs e)
         {
-            StudentManager aStudentManager = new StudentManager();
-
             string name = TextBox1.Text;//data transfer object(DTO) creating >>> Student aStudent= new Student(name,email,phnNo,regNo);
             string email = TextBox2.Text;
             string phnNo = TextBox3.Text;

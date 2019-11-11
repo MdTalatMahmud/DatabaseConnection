@@ -74,8 +74,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\DepartmentManagement.cs" />
     <Compile Include="BLL\StudentManager.cs" />
+    <Compile Include="DAL\DepartmentGateway.cs" />
     <Compile Include="DAL\StudentGateway.cs" />
+    <Compile Include="Model\Department.cs" />
     <Compile Include="UI\DeleteStudentUI.aspx.cs">
       <DependentUpon>DeleteStudentUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

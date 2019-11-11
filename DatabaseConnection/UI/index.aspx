@@ -25,6 +25,11 @@
             <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
             <br />
             <br />
+            <asp:Label ID="Label5" runat="server" Text="Department"></asp:Label>
+            <asp:DropDownList ID="DropDownListID" runat="server">
+            </asp:DropDownList>
+            <br />
+            <br />
             <asp:Button ID="SaveButton" runat="server" OnClick="SaveButton_Click" Text="Save" />
             <br />
             <br />
